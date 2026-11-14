@@ -7,6 +7,11 @@ listing:
     - "body/*.qmd"
     - "mind/*.qmd"
     - "notes/*.qmd"
+    - "!systems/index.qmd"
+    - "!money/index.qmd"
+    - "!body/index.qmd"
+    - "!mind/index.qmd"
+    - "!notes/index.qmd"
   sort: "date desc"
   type: table
   fields: [date, title, categories]
