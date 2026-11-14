@@ -1,6 +1,9 @@
 ---
 title: "DataGan"
+subtitle: "Notes on systems, money, body, and mind."
+toc: false
 listing:
+  id: latest
   contents:
     - "systems/*.qmd"
     - "money/*.qmd"
@@ -13,9 +16,22 @@ listing:
     - "!mind/index.qmd"
     - "!notes/index.qmd"
   sort: "date desc"
-  type: table
-  fields: [date, title, categories]
-  max-items: 20
+  type: default
+  fields: [date, title, description, categories, reading-time]
+  max-items: 10
 ---
 
-All things Data, and the markets.
+```{=html}
+<div class="section-grid">
+  <a class="section-card" href="systems/index.html"><strong>Systems</strong><span>How software really works, and how we see inside it.</span></a>
+  <a class="section-card" href="money/index.html"><strong>Money</strong><span>Markets, trading, and investing.</span></a>
+  <a class="section-card" href="body/index.html"><strong>Body</strong><span>Food, fitness, and a healthier me.</span></a>
+  <a class="section-card" href="mind/index.html"><strong>Mind</strong><span>Calm, family, and the inner work.</span></a>
+  <a class="section-card" href="notes/index.html"><strong>Notes</strong><span>Everything else.</span></a>
+</div>
+```
+
+## Latest
+
+::: {#latest}
+:::

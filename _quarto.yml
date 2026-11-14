@@ -26,7 +26,9 @@ website:
 format:
   html:
     theme:
-      - cosmo
-      - brand
+      light: [litera, theme.scss]
+      dark: [darkly, theme.scss]
     css: styles.css
     toc: true
+    grid:
+      body-width: 740px

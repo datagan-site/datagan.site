@@ -19,6 +19,7 @@
 
 
 
+
 <p>SSE is the standard for streaming data from server to client over HTTP. Server pushes the update to the client</p>
 <p>Built a real-time news stream processing engine supporting infinite publisher streams, windowed aggregations, compile-once transformations, SSE delivery, and backpressure-aware async pipelines.</p>
 <p>Real-Time News Stream Processing Engine” That gives you:</p>
@@ -46,6 +47,7 @@
   <title>Observability Engineering: Notes</title>
   <link>https://datagan.site/systems/oe.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -82,6 +84,7 @@
 
 
 
+
 <p>Authentication - Azure Active Directory is an identity and access management service.</p>
 <p>Azure Monitor: 1. Detect and analyze issues across applications and dependencies 2. Correlate infrastructure problems with insights from the VMs and containers 3. Create visualizations for logs and other kinds of telemetry</p>
 <p>Managing an Azure DevOps Project with Azure Boards Automating Code Builds and Automated Tests with Azure Pipelines Resource groups can be used to group resources by project, department, service, feature</p>
@@ -97,6 +100,7 @@
   <title>Designing Data-Intensive Applications (2nd Edition): Notes</title>
   <link>https://datagan.site/systems/ddia.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -216,6 +220,7 @@
 
 
 
+
 <p>What are the advantages of cloud? 1. Flexibility 2. Efficiency 3. Cost-effectiveness</p>
 <section id="what-are-the-different-layers-of-cloud" class="level1">
 <h1>What Are the Different Layers of Cloud</h1>
@@ -292,6 +297,7 @@ It also provides auto failover capabilities that ensure high availability by shi
   <title>Databricks - PySpark: A Definitive Guide</title>
   <link>https://datagan.site/systems/pyspark.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -441,6 +447,7 @@ It also provides auto failover capabilities that ensure high availability by shi
   <title>Netflix Games: Detecting Broken Gameplay Using Log Clustering</title>
   <link>https://datagan.site/systems/netflix_cluster_logs.html</link>
   <description><![CDATA[ 
+
 
 
 

@@ -45,10 +45,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-447e42e69aaa9833c0ba1b986f430b20.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d31a0c91b01e363be7b7a36e602e2c70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-3de4364058f28458464f95c6559477aa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-491968d1d160e5c8552947123a288c4c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-3de4364058f28458464f95c6559477aa.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,20 +83,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-latest .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-description','listing-categories','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-latest'] = new List('listing-latest', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -133,7 +137,177 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a>
+<body class="nav-fixed fullcontent quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Skip to main content</a><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          toggle.setAttribute("aria-checked", alternate ? "true" : "false");
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455).
+    // Not run on load: stylesheets are set before first paint there, and
+    // scrolling would undo the scroll to a URL fragment (#14973).
+    // The one pixel nudge keeps the reader where they were.
+    const refreshSafariScrollbar = () => {
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        const scrollY = window.scrollY;
+        window.scrollTo(0, scrollY > 0 ? scrollY - 1 : 1);
+        setTimeout(() => {
+          window.scrollTo(0, scrollY);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      refreshSafariScrollbar();
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -180,6 +354,7 @@ window.Quarto = {
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
+  <button type="button" role="switch" aria-checked="false" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="bi"></i></button>
 </div>
             <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
@@ -189,15 +364,15 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content" tabindex="-1">
+
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">DataGan</h1>
+<p class="subtitle lead">Notes on systems, money, body, and mind.</p>
 </div>
 
 
@@ -214,177 +389,306 @@ window.Quarto = {
 </header>
 
 
-<p>All things Data, and the markets.</p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-    <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-      <option value="" disabled="" selected="" hidden="">Order By</option>
-      <option value="index" data-direction="asc">Default</option>
-      <option value="listing-date-sort" data-direction="asc">
-        Date - Oldest
-      </option>
-      <option value="listing-date-sort" data-direction="desc">
-        Date - Newest
-      </option>
-      <option value="listing-title-sort" data-direction="asc">
-        Title
-      </option>
-    </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
+<div class="section-grid">
+  <a class="section-card" href="systems/index.html"><strong>Systems</strong><span>How software really works, and how we see inside it.</span></a>
+  <a class="section-card" href="money/index.html"><strong>Money</strong><span>Markets, trading, and investing.</span></a>
+  <a class="section-card" href="body/index.html"><strong>Body</strong><span>Food, fitness, and a healthier me.</span></a>
+  <a class="section-card" href="mind/index.html"><strong>Mind</strong><span>Calm, family, and the inner work.</span></a>
+  <a class="section-card" href="notes/index.html"><strong>Notes</strong><span>Everything else.</span></a>
 </div>
-<table class="quarto-listing-table table">
-<thead>
-<tr>
+<section id="latest" class="level2">
+<h2 class="anchored" data-anchor-id="latest">Latest</h2>
+<div id="listing-latest" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="cHl0aG9u" data-listing-date-sort="1779301800000" data-listing-file-modified-sort="1794675947611" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="174">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./systems/fastapi-sse.html" class="no-external-icon">Server-Sent Events with FastAPI</a>
+</h3>
+<div class="listing-categories">
 
-<th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
+<div class="listing-category" onclick="window.quartoListingCategory('cHl0aG9u'); return false;">python</div>
 
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
+</div>
+<div class="listing-description">
+<a href="./systems/fastapi-sse.html" class="no-external-icon">
+SSE is the standard for streaming data from server to client over HTTP. Server pushes the update to the client
+</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./systems/fastapi-sse.html" class="no-external-icon">
+<div class="listing-date">
+May 21, 2026
+</div>
+<div class="listing-reading-time">1 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="Ym9va3MlMkNvYnNlcnZhYmlsaXR5" data-listing-date-sort="1764613800000" data-listing-file-modified-sort="1794675947726" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="288">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./systems/oe.html" class="no-external-icon">Observability Engineering: Notes</a>
+</h3>
+<div class="listing-categories">
 
-<th>
-Categories
-</th>
+<div class="listing-category" onclick="window.quartoListingCategory('Ym9va3M='); return false;">books</div>
 
-</tr>
-</thead>
-<tbody class="list">
+<div class="listing-category" onclick="window.quartoListingCategory('b2JzZXJ2YWJpbGl0eQ=='); return false;">observability</div>
 
-<tr data-index="0" data-categories="cHl0aG9u" data-listing-date-sort="1779301800000" data-listing-file-modified-sort="1794675947611" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="174" data-listing-title-sort="Server-Sent Events with FastAPI" data-listing-filename-sort="fastapi-sse.qmd">
-<td>
-<span class="listing-date">May 21, 2026</span>
-</td>
-<td>
-<a href="./systems/fastapi-sse.html" class="title listing-title">Server-Sent Events with FastAPI</a>
-</td>
-<td>
-<span class="listing-categories">python</span>
-</td>
+</div>
+<div class="listing-description">
+<a href="./systems/oe.html" class="no-external-icon">
+When a software is mentioned to have observability? When we can understand: * Inner workings * System state * inner workings and system state from external observation *…
+</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./systems/oe.html" class="no-external-icon">
+<div class="listing-date">
+Dec 2, 2025
+</div>
+<div class="listing-reading-time">2 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="Y2xvdWQ=" data-listing-date-sort="1763577000000" data-listing-file-modified-sort="1794675947643" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="68">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./systems/azure.html" class="no-external-icon">Azure - A Definitive Guide</a>
+</h3>
+<div class="listing-categories">
 
-</tr>
+<div class="listing-category" onclick="window.quartoListingCategory('Y2xvdWQ='); return false;">cloud</div>
 
-<tr data-index="1" data-categories="Ym9va3MlMkNvYnNlcnZhYmlsaXR5" data-listing-date-sort="1764613800000" data-listing-file-modified-sort="1794675947726" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="288" data-listing-title-sort="Observability Engineering: Notes" data-listing-filename-sort="oe.qmd">
-<td>
-<span class="listing-date">Dec 2, 2025</span>
-</td>
-<td>
-<a href="./systems/oe.html" class="title listing-title">Observability Engineering: Notes</a>
-</td>
-<td>
-<span class="listing-categories">books, observability</span>
-</td>
+</div>
+<div class="listing-description">
+<a href="./systems/azure.html" class="no-external-icon">
+Authentication - Azure Active Directory is an identity and access management service.
+</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./systems/azure.html" class="no-external-icon">
+<div class="listing-date">
+Nov 20, 2025
+</div>
+<div class="listing-reading-time">1 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="aW5uZXItcGVhY2U=" data-listing-date-sort="1763231400000" data-listing-file-modified-sort="1794675947759" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="268">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./mind/no_hurry.html" class="no-external-icon">Checklist for Slowing Down</a>
+</h3>
+<div class="listing-categories">
 
-</tr>
+<div class="listing-category" onclick="window.quartoListingCategory('aW5uZXItcGVhY2U='); return false;">inner-peace</div>
 
-<tr data-index="2" data-categories="Y2xvdWQ=" data-listing-date-sort="1763577000000" data-listing-file-modified-sort="1794675947643" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="68" data-listing-title-sort="Azure - A Definitive Guide" data-listing-filename-sort="azure.qmd">
-<td>
-<span class="listing-date">Nov 20, 2025</span>
-</td>
-<td>
-<a href="./systems/azure.html" class="title listing-title">Azure - A Definitive Guide</a>
-</td>
-<td>
-<span class="listing-categories">cloud</span>
-</td>
+</div>
+<div class="listing-description">
+<a href="./mind/no_hurry.html" class="no-external-icon">
+Block buffer time on your calendar to handle surprise tasks.
+</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./mind/no_hurry.html" class="no-external-icon">
+<div class="listing-date">
+Nov 16, 2025
+</div>
+<div class="listing-reading-time">2 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="Ym9va3MlMkNkYXRh" data-listing-date-sort="1762799400000" data-listing-file-modified-sort="1794675947715" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2273">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./systems/ddia.html" class="no-external-icon">Designing Data-Intensive Applications (2nd Edition): Notes</a>
+</h3>
+<div class="listing-categories">
 
-</tr>
+<div class="listing-category" onclick="window.quartoListingCategory('Ym9va3M='); return false;">books</div>
 
-<tr data-index="3" data-categories="aW5uZXItcGVhY2U=" data-listing-date-sort="1763231400000" data-listing-file-modified-sort="1794675947759" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="268" data-listing-title-sort="Checklist for Slowing Down" data-listing-filename-sort="no_hurry.qmd">
-<td>
-<span class="listing-date">Nov 16, 2025</span>
-</td>
-<td>
-<a href="./mind/no_hurry.html" class="title listing-title">Checklist for Slowing Down</a>
-</td>
-<td>
-<span class="listing-categories">inner-peace</span>
-</td>
+<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YQ=='); return false;">data</div>
 
-</tr>
+</div>
+<div class="listing-description">
+<a href="./systems/ddia.html" class="no-external-icon">
+Chapter 1. Trade-offs in Data Systems Architecture
+</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./systems/ddia.html" class="no-external-icon">
+<div class="listing-date">
+Nov 11, 2025
+</div>
+<div class="listing-reading-time">12 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="Y2xvdWQ=" data-listing-date-sort="1762799400000" data-listing-file-modified-sort="1794675947838" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="602">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./systems/gcp.html" class="no-external-icon">GCP - A Definitive Guide</a>
+</h3>
+<div class="listing-categories">
 
-<tr data-index="4" data-categories="Ym9va3MlMkNkYXRh" data-listing-date-sort="1762799400000" data-listing-file-modified-sort="1794675947715" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2273" data-listing-title-sort="Designing Data-Intensive Applications (2nd Edition): Notes" data-listing-filename-sort="ddia.qmd">
-<td>
-<span class="listing-date">Nov 11, 2025</span>
-</td>
-<td>
-<a href="./systems/ddia.html" class="title listing-title">Designing Data-Intensive Applications (2nd Edition): Notes</a>
-</td>
-<td>
-<span class="listing-categories">books, data</span>
-</td>
+<div class="listing-category" onclick="window.quartoListingCategory('Y2xvdWQ='); return false;">cloud</div>
 
-</tr>
+</div>
+<div class="listing-description">
+<a href="./systems/gcp.html" class="no-external-icon">
+What are the advantages of cloud? 1. Flexibility 2. Efficiency 3. Cost-effectiveness
+</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./systems/gcp.html" class="no-external-icon">
+<div class="listing-date">
+Nov 11, 2025
+</div>
+<div class="listing-reading-time">4 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="ZGF0YQ==" data-listing-date-sort="1762799400000" data-listing-file-modified-sort="1794675947513" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="629">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./systems/pyspark.html" class="no-external-icon">Databricks - PySpark: A Definitive Guide</a>
+</h3>
+<div class="listing-categories">
 
-<tr data-index="5" data-categories="Y2xvdWQ=" data-listing-date-sort="1762799400000" data-listing-file-modified-sort="1794675947838" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="602" data-listing-title-sort="GCP - A Definitive Guide" data-listing-filename-sort="gcp.qmd">
-<td>
-<span class="listing-date">Nov 11, 2025</span>
-</td>
-<td>
-<a href="./systems/gcp.html" class="title listing-title">GCP - A Definitive Guide</a>
-</td>
-<td>
-<span class="listing-categories">cloud</span>
-</td>
+<div class="listing-category" onclick="window.quartoListingCategory('ZGF0YQ=='); return false;">data</div>
 
-</tr>
+</div>
+<div class="listing-description">
+<a href="./systems/pyspark.html" class="no-external-icon">
+Databricks offers a unified platform combining data lakes (flexible, cheap) and data warehouses (structured, governed, quality) known as a <strong>data lakehouse</strong>.
+</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./systems/pyspark.html" class="no-external-icon">
+<div class="listing-date">
+Nov 11, 2025
+</div>
+<div class="listing-reading-time">4 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="Y29tcGFueS1zdHVkeQ==" data-listing-date-sort="1762799400000" data-listing-file-modified-sort="1794675947749" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="370">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./notes/linear_culture.html" class="no-external-icon">Linear Culture</a>
+</h3>
+<div class="listing-categories">
 
-<tr data-index="6" data-categories="ZGF0YQ==" data-listing-date-sort="1762799400000" data-listing-file-modified-sort="1794675947513" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="629" data-listing-title-sort="Databricks - PySpark: A Definitive Guide" data-listing-filename-sort="pyspark.qmd">
-<td>
-<span class="listing-date">Nov 11, 2025</span>
-</td>
-<td>
-<a href="./systems/pyspark.html" class="title listing-title">Databricks - PySpark: A Definitive Guide</a>
-</td>
-<td>
-<span class="listing-categories">data</span>
-</td>
+<div class="listing-category" onclick="window.quartoListingCategory('Y29tcGFueS1zdHVkeQ=='); return false;">company-study</div>
 
-</tr>
+</div>
+<div class="listing-description">
+<a href="./notes/linear_culture.html" class="no-external-icon">
+Big Tech experience builds credibility, skills, and makes fundraising easier for founders.
+</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./notes/linear_culture.html" class="no-external-icon">
+<div class="listing-date">
+Nov 11, 2025
+</div>
+<div class="listing-reading-time">2 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-categories="b2JzZXJ2YWJpbGl0eQ==" data-listing-date-sort="1762281000000" data-listing-file-modified-sort="1794675947483" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="325">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./systems/netflix_cluster_logs.html" class="no-external-icon">Netflix Games: Detecting Broken Gameplay Using Log Clustering</a>
+</h3>
+<div class="listing-categories">
 
-<tr data-index="7" data-categories="Y29tcGFueS1zdHVkeQ==" data-listing-date-sort="1762799400000" data-listing-file-modified-sort="1794675947749" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="370" data-listing-title-sort="Linear Culture" data-listing-filename-sort="linear_culture.qmd">
-<td>
-<span class="listing-date">Nov 11, 2025</span>
-</td>
-<td>
-<a href="./notes/linear_culture.html" class="title listing-title">Linear Culture</a>
-</td>
-<td>
-<span class="listing-categories">company-study</span>
-</td>
+<div class="listing-category" onclick="window.quartoListingCategory('b2JzZXJ2YWJpbGl0eQ=='); return false;">observability</div>
 
-</tr>
-
-<tr data-index="8" data-categories="b2JzZXJ2YWJpbGl0eQ==" data-listing-date-sort="1762281000000" data-listing-file-modified-sort="1794675947483" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="325" data-listing-title-sort="Netflix Games: Detecting Broken Gameplay Using Log Clustering" data-listing-filename-sort="netflix_cluster_logs.qmd">
-<td>
-<span class="listing-date">Nov 5, 2025</span>
-</td>
-<td>
-<a href="./systems/netflix_cluster_logs.html" class="title listing-title">Netflix Games: Detecting Broken Gameplay Using Log Clustering</a>
-</td>
-<td>
-<span class="listing-categories">observability</span>
-</td>
-
-</tr>
-
-</tbody>
-</table>
+</div>
+<div class="listing-description">
+<a href="./systems/netflix_cluster_logs.html" class="no-external-icon">
+At Netflix, the SRE team for Netflix Games focuses on monitoring key network performance metrics such as latency bitrate and packet loss<br>
+However, these metrics alone don’t…<em></em>
+</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./systems/netflix_cluster_logs.html" class="no-external-icon">
+<div class="listing-date">
+Nov 5, 2025
+</div>
+<div class="listing-reading-time">2 min</div>
+</a>
+</div>
+</div>
+</div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const toggle = window.document.createElement('button');
+      toggle.type = "button";
+      toggle.setAttribute("role", "switch");
+      toggle.setAttribute("aria-checked", "false");
+      toggle.classList.add('top-right');
+      toggle.classList.add('quarto-color-scheme-toggle');
+      toggle.setAttribute("aria-label", "Toggle dark mode");
+      toggle.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      toggle.appendChild(i);
+      // Put the toggle in a landmark of its own, so that landmark navigation
+      // can reach it.
+      //
+      // The container is always a fresh direct child of body, and the toggle is
+      // never moved into page furniture that the theme or the author controls.
+      // The toggle is positioned against the page, so any ancestor that
+      // establishes a containing block captures it: a positioned element or a
+      // grid for position: absolute, and transform, filter, will-change or
+      // contain for position: fixed. A direct child of body has none of these
+      // to inherit, and the shift when one appears is silent and visual.
+      //
+      // ARIA says a document should have at most one banner, and axe reports a
+      // duplicate whether or not the banners carry distinct labels. So use a
+      // header when the page has no banner yet, and a named region otherwise.
+      //
+      // A header is a banner wherever it sits, unless it is inside sectioning
+      // content, so this cannot just look at the children of body: a custom
+      // page layout wraps the title block header in a plain div. An explicit
+      // role="banner" always counts.
+      const sectioning = 'article, aside, main, nav, section, [role="article"], [role="complementary"], [role="main"], [role="navigation"], [role="region"]';
+      const hasBanner = Array.from(
+        window.document.querySelectorAll('header:not([role]), [role="banner"]')
+      ).some(function(el) {
+        return el.hasAttribute("role") || el.closest(sectioning) === null;
+      });
+      const container = window.document.createElement(hasBanner ? "div" : "header");
+      if (hasBanner) {
+        container.setAttribute("role", "region");
+        container.setAttribute("aria-label", "Toggle dark mode");
+      }
+      container.classList.add('quarto-color-scheme-toggle-container');
+      container.appendChild(toggle);
+      window.document.body.appendChild(container);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {

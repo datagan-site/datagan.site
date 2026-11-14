@@ -242,7 +242,14 @@
     "href": "index.html",
     "title": "DataGan",
     "section": "",
-    "text": "All things Data, and the markets.\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Title\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\n\nTitle\n\n\n\nCategories\n\n\n\n\n\n\n\n\nMay 21, 2026\n\n\nServer-Sent Events with FastAPI\n\n\npython\n\n\n\n\n\n\nDec 2, 2025\n\n\nObservability Engineering: Notes\n\n\nbooks, observability\n\n\n\n\n\n\nNov 20, 2025\n\n\nAzure - A Definitive Guide\n\n\ncloud\n\n\n\n\n\n\nNov 16, 2025\n\n\nChecklist for Slowing Down\n\n\ninner-peace\n\n\n\n\n\n\nNov 11, 2025\n\n\nDesigning Data-Intensive Applications (2nd Edition): Notes\n\n\nbooks, data\n\n\n\n\n\n\nNov 11, 2025\n\n\nGCP - A Definitive Guide\n\n\ncloud\n\n\n\n\n\n\nNov 11, 2025\n\n\nDatabricks - PySpark: A Definitive Guide\n\n\ndata\n\n\n\n\n\n\nNov 11, 2025\n\n\nLinear Culture\n\n\ncompany-study\n\n\n\n\n\n\nNov 5, 2025\n\n\nNetflix Games: Detecting Broken Gameplay Using Log Clustering\n\n\nobservability\n\n\n\n\n\n\nNo matching items"
+    "text": "SystemsHow software really works, and how we see inside it.\n  MoneyMarkets, trading, and investing.\n  BodyFood, fitness, and a healthier me.\n  MindCalm, family, and the inner work.\n  NotesEverything else."
+  },
+  {
+    "objectID": "index.html#latest",
+    "href": "index.html#latest",
+    "title": "DataGan",
+    "section": "Latest",
+    "text": "Latest\n\n\n\n\n\nServer-Sent Events with FastAPI\n\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 21, 2026\n\n1 min\n\n\n\n\n\n\nObservability Engineering: Notes\n\n\n\nbooks\n\nobservability\n\n\n\n\n\n\n\n\n\n\n\nDec 2, 2025\n\n2 min\n\n\n\n\n\n\nAzure - A Definitive Guide\n\n\n\ncloud\n\n\n\n\n\n\n\n\n\n\n\nNov 20, 2025\n\n1 min\n\n\n\n\n\n\nChecklist for Slowing Down\n\n\n\ninner-peace\n\n\n\n\n\n\n\n\n\n\n\nNov 16, 2025\n\n2 min\n\n\n\n\n\n\nDesigning Data-Intensive Applications (2nd Edition): Notes\n\n\n\nbooks\n\ndata\n\n\n\n\n\n\n\n\n\n\n\nNov 11, 2025\n\n12 min\n\n\n\n\n\n\nGCP - A Definitive Guide\n\n\n\ncloud\n\n\n\n\n\n\n\n\n\n\n\nNov 11, 2025\n\n4 min\n\n\n\n\n\n\nDatabricks - PySpark: A Definitive Guide\n\n\n\ndata\n\n\n\n\n\n\n\n\n\n\n\nNov 11, 2025\n\n4 min\n\n\n\n\n\n\nLinear Culture\n\n\n\ncompany-study\n\n\n\n\n\n\n\n\n\n\n\nNov 11, 2025\n\n2 min\n\n\n\n\n\n\nNetflix Games: Detecting Broken Gameplay Using Log Clustering\n\n\n\nobservability\n\n\n\n\n\n\n\n\n\n\n\nNov 5, 2025\n\n2 min\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "notes/linear_culture.html",
