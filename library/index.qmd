@@ -1,0 +1,11 @@
+---
+title: "Library"
+description: "Notes on books and papers, and what I will use from each one."
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+---
+

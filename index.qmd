@@ -1,5 +1,17 @@
 ---
 title: "DataGan"
+listing:
+  contents:
+    - "engineering/*.qmd"
+    - "markets/*.qmd"
+    - "lab/*.qmd"
+    - "library/*.qmd"
+    - "life/*.qmd"
+    - "log/*.qmd"
+  sort: "date desc"
+  type: table
+  fields: [date, title, categories]
+  max-items: 20
 ---
 
-All things Data!
+All things Data, and the markets.

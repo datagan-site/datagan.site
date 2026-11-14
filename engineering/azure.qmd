@@ -1,0 +1,16 @@
+---
+title: "Azure - A Definitive Guide"
+date: 2025-11-20
+categories: [cloud]
+---
+
+Authentication - Azure Active Directory is an identity and access management service.
+
+Azure Monitor:
+1. Detect and analyze issues across applications and dependencies
+2. Correlate infrastructure problems with insights from the VMs and containers
+3. Create visualizations for logs and other kinds of telemetry
+
+Managing an Azure DevOps Project with Azure Boards
+Automating Code Builds and Automated Tests  with Azure Pipelines
+Resource groups can be used to group resources by project, department, service, feature

@@ -1,0 +1,6 @@
+---
+title: "OpenTelemetry"
+categories: [observability]
+draft: true
+---
+

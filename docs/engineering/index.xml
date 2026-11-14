@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>datagan.site</title>
+<link>https://datagan.site/engineering/</link>
+<atom:link href="https://datagan.site/engineering/index.xml" rel="self" type="application/rss+xml"/>
+<description>Data, observability, and distributed systems: deep dives and production stories.</description>
+<generator>quarto-1.11.9</generator>
+<lastBuildDate>Wed, 20 May 2026 18:30:00 GMT</lastBuildDate>
+<item>
+  <title>Server-Sent Events with FastAPI</title>
+  <link>https://datagan.site/engineering/fastapi-sse.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>SSE is the standard for streaming data from server to client over HTTP. Server pushes the update to the client</p>
+<p>Built a real-time news stream processing engine supporting infinite publisher streams, windowed aggregations, compile-once transformations, SSE delivery, and backpressure-aware async pipelines.</p>
+<p>Real-Time News Stream Processing Engine” That gives you:</p>
+<p>continuous event streams windows transforms fanout prioritization backpressure infinite producers</p>
+<p>without sounding like observability/log infrastructure.</p>
+<p>Why News Works Well</p>
+<p>News naturally behaves like streaming events.</p>
+<p>Example event:</p>
+<p>{ “source”: “Reuters”, “category”: “technology”, “headline”: “AI chip demand rises”, “timestamp”: … }</p>
+<p>You can simulate:</p>
+<p>multiple publishers breaking news bursts category subscriptions rolling trends live feeds</p>
+<p>Very realistic for stream systems.</p>
+<p>Mapping from Log Concepts → News Concepts Streaming System Concept News Equivalent log event news article producer publisher severity priority stream live feed aggregation trend analysis alerts breaking news fanout subscribers filtering topic/category filters Your Architecture Becomes News Publishers ↓ Ingress Queue ↓ Normalizer ↓ Transform Engine ↓ Window Aggregator ↓ Subscriber Queues ↓ SSE Clients</p>
+<p>Looks clean and product-oriented. Infinite Loop Producers Each publisher continuously emits articles:</p>
+<p>while running: article = generate_news() await ingress_queue.put(article)</p>
+
+
+
+ ]]></description>
+  <category>python</category>
+  <guid>https://datagan.site/engineering/fastapi-sse.html</guid>
+  <pubDate>Wed, 20 May 2026 18:30:00 GMT</pubDate>
+</item>
+<item>
+  <title>Azure - A Definitive Guide</title>
+  <link>https://datagan.site/engineering/azure.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Authentication - Azure Active Directory is an identity and access management service.</p>
+<p>Azure Monitor: 1. Detect and analyze issues across applications and dependencies 2. Correlate infrastructure problems with insights from the VMs and containers 3. Create visualizations for logs and other kinds of telemetry</p>
+<p>Managing an Azure DevOps Project with Azure Boards Automating Code Builds and Automated Tests with Azure Pipelines Resource groups can be used to group resources by project, department, service, feature</p>
+
+
+
+ ]]></description>
+  <category>cloud</category>
+  <guid>https://datagan.site/engineering/azure.html</guid>
+  <pubDate>Wed, 19 Nov 2025 18:30:00 GMT</pubDate>
+</item>
+<item>
+  <title>GCP - A Definitive Guide</title>
+  <link>https://datagan.site/engineering/gcp.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>What are the advantages of cloud? 1. Flexibility 2. Efficiency 3. Cost-effectiveness</p>
+<section id="what-are-the-different-layers-of-cloud" class="level1">
+<h1>What Are the Different Layers of Cloud</h1>
+<p>Cloud computing is generally divided into three main layers. Each layer provides different levels of control, flexibility, and management for users and organizations.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://datagan.site/engineering/assets/cloud_types.png" class="img-fluid figure-img"></p>
+<figcaption>Cloud Layers credit: O’reilly</figcaption>
+</figure>
+</div>
+</section>
+<section id="understanding-google-cloud-compute-engine" class="level1">
+<h1>Understanding Google Cloud Compute Engine</h1>
+<p>Compute Engine is a customizable compute service offered by Google Cloud. It provides virtual machines that function like traditional on-premises servers but with the flexibility and scalability of the cloud.</p>
+<section id="what-makes-compute-engine-special" class="level2">
+<h2 class="anchored" data-anchor-id="what-makes-compute-engine-special">What Makes Compute Engine Special</h2>
+<p>Compute Engine allows users to start and stop instances as needed. This feature provides full control over resource usage and makes it easy to scale infrastructure based on workload requirements. It is suitable for applications of any size, from small development environments to large enterprise systems.</p>
+</section>
+<section id="machine-types" class="level2">
+<h2 class="anchored" data-anchor-id="machine-types">Machine Types</h2>
+<p>Compute Engine offers several types of virtual machines to suit different workloads</p>
+<p><strong>General Purpose</strong><br>
+Used for common and everyday computing tasks.</p>
+<p><strong>Memory Optimized</strong><br>
+Designed for data-heavy and in-memory applications.</p>
+<p><strong>Compute Optimized</strong><br>
+Ideal for high performance computing workloads.</p>
+<p><strong>Accelerator Optimized</strong><br>
+Best suited for machine learning and GPU intensive tasks.</p>
+</section>
+<section id="smart-scaling-and-reliability" class="level2">
+<h2 class="anchored" data-anchor-id="smart-scaling-and-reliability">Smart Scaling and Reliability</h2>
+<p>Compute Engine supports auto scaling, allowing instances to automatically adjust based on demand. Predictive auto scaling can anticipate future workload needs and prepare resources in advance.<br>
+It also provides auto failover capabilities that ensure high availability by shifting workloads to another zone or region if a failure occurs.</p>
+</section>
+<section id="cost-optimization" class="level2">
+<h2 class="anchored" data-anchor-id="cost-optimization">Cost Optimization</h2>
+<p>For batch or temporary workloads, preemptible instances are available. These are short lived and cost effective virtual machines that help reduce expenses for non critical processing tasks. They can be started, used for batch jobs, and then shut down to save cost.</p>
+</section>
+<section id="security-with-iam" class="level2">
+<h2 class="anchored" data-anchor-id="security-with-iam">Security with IAM</h2>
+<p>Security in Compute Engine is managed through Identity and Access Management (IAM). Users with the correct permissions can create, manage, or replicate virtual machines and operating systems. This ensures that access is controlled and resources remain protected.</p>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>Compute Engine provides<br>
+- Flexible and scalable compute resources<br>
+- Cost efficient options for temporary workloads<br>
+- High availability through auto failover<br>
+- Security and access control through IAM</p>
+<p>Compute Engine enables users to build, scale, and manage applications in the cloud with efficiency and reliability.</p>
+<p>Why containers? share the OS kernel, start much faster, and use a fraction of the memory compared to booting an entire OS</p>
+<p>What is GKE? GKE is auto-pilot of k8s. Scales vertically and horitzontally based on consumption</p>
+<p>What is App Engine? Serverless compute option for low latency applications. Achieves fast response by integrating to memory store in Redis</p>
+<p>What is Cloud Function? Cloud Functions is a fully managed event-driven serverless function-as-a-service (FaaS). Equivalent of lambda in AWS.</p>
+<p>What are different kind of storage? Object store Block File Store</p>
+<p>What are they? Object store is used for binary and object data, blobs, and unstructured data Block storage is used for database block storage. Local SSD is the popular option File storage is NAS equivlanet of a shared filesystem</p>
+<p>What are the different storage classes? * Standard –&gt; Regional * Nearline * Coldline * Archive</p>
+<p>What are different types of managed DBs? * Cloud SQL(Runs pg, mysql) * Cloud Spanner(combines Relational and Non Relational) with unlimited scale. Can configure for strong reads and stale reads * Firestore - Document model database,serverless * Bigtable - Petabyte NODQL database for low latency * Memory store - Fully managed inmemory store</p>
+<p>What are components in data analytics pipeline? * Capture –&gt; Pub/Sub, BigQuery * Process –&gt; Dataproc,Dataprep,Dataflow * Store –&gt; Cloud Storage, Big Query, * Analyse/Use –&gt; TensorFlow, Vertex,DataStudio, Looker * Across –&gt; Data Fusion, Data Catalog, Composer, Datastream</p>
+<p>What are the components in Data Science, Machine Learning, and Artificial Intelligence? * Prepackaged AI Solutions(Recommendation, Document, Contact Centre, DialogFlow) * PreTrained APIs (Vision, Translation, Video Intelligence) * AutoML Vertex AI * Vertex Training</p>
+<p>what is the architecture of vertex forecasting? * Prepare dataset * Train with models * Forecast * Visualise, Integrate</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>cloud</category>
+  <guid>https://datagan.site/engineering/gcp.html</guid>
+  <pubDate>Mon, 10 Nov 2025 18:30:00 GMT</pubDate>
+</item>
+<item>
+  <title>Databricks - PySpark: A Definitive Guide</title>
+  <link>https://datagan.site/engineering/pyspark.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="what-problem-does-databricks-solve" class="level2">
+<h2 class="anchored" data-anchor-id="what-problem-does-databricks-solve">What problem does Databricks solve?</h2>
+<p>Databricks offers a unified platform combining data lakes (flexible, cheap) and data warehouses (structured, governed, quality) known as a <strong>data lakehouse</strong>.</p>
+</section>
+<section id="what-is-the-high-level-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-high-level-architecture">What is the high-level architecture?</h2>
+<ul>
+<li><strong>DB uses one of the cloud providers as underlying infrastructure</strong></li>
+<li><strong>Databricks Runtime</strong> - Preconfigured VM for cluster use</li>
+<li><strong>Unity Catalog</strong> - Provides unified view and permissions</li>
+<li><strong>DB Workspace</strong> - Any language accessing Databricks</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://datagan.site/engineering/assets/architecture.png" class="img-fluid figure-img"></p>
+<figcaption>Architecture Diagram. Credit: Oreilly</figcaption>
+</figure>
+</div>
+<section id="two-main-components" class="level3">
+<h3 class="anchored" data-anchor-id="two-main-components">Two Main Components:</h3>
+<ul>
+<li><strong>Control Plane</strong>: Web UI, Cluster Management, Workflows, Notebooks</li>
+<li><strong>Data Plane</strong>: Storage and Compute/VMs</li>
+</ul>
+</section>
+</section>
+<section id="why-is-apache-spark-so-popular" class="level2">
+<h2 class="anchored" data-anchor-id="why-is-apache-spark-so-popular">Why is Apache Spark so popular?</h2>
+<ul>
+<li>Distributed data processing</li>
+<li>In-memory processing</li>
+<li>Multi-language support</li>
+<li>Batch and stream processing</li>
+<li>Flexible data handling</li>
+</ul>
+</section>
+<section id="what-is-delta-lake" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-delta-lake">What is Delta Lake?</h2>
+<p>Delta Lake is an open-source transactional storage layer on top of cloud storage. It is a <strong>framework</strong>, not a medium or format like Parquet. It supports <strong>ACID guarantees</strong>.</p>
+</section>
+<section id="what-are-the-key-commands-used-with-delta-lake" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-the-key-commands-used-with-delta-lake">What are the key commands used with Delta Lake?</h2>
+<ul>
+<li><code>USING DELTA</code></li>
+<li><code>DESCRIBE</code></li>
+<li><code>OPTIMIZE</code> - Compacts small files into larger ones</li>
+<li><code>OPTIMIZE &lt;table_name&gt; ZORDER BY &lt;column_names&gt;</code> - Creates an index for the column, enabling skip scanning to directly reach relevant chunks</li>
+<li><code>DROP</code></li>
+</ul>
+</section>
+<section id="what-is-the-relational-structure" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-the-relational-structure">What is the relational structure?</h2>
+<pre><code>Storage --&gt; Schema --&gt; Table1, Table2</code></pre>
+<p><strong>Note:</strong> Databricks uses Hive’s metastore format and SQL compatibility, but replaces Hive’s compute engine with Spark and Delta Lake.</p>
+</section>
+<section id="what-are-different-sql-functions-available" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-different-sql-functions-available">What are different SQL functions available?</h2>
+<ul>
+<li><code>INTERSECT</code></li>
+<li><code>MINUS</code></li>
+<li><code>PIVOT</code></li>
+<li><code>FILTER</code></li>
+<li><code>TRANSFORM</code></li>
+</ul>
+</section>
+<section id="what-are-udfs" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-udfs">What are UDFs?</h2>
+<p><strong>User-Defined Functions (UDFs)</strong> are custom functions that: - Accept parameters - Can be used as part of SQL queries - Can be described using the <code>DESCRIBE</code> command</p>
+</section>
+<section id="how-does-spark-handle-data-streaming" class="level2">
+<h2 class="anchored" data-anchor-id="how-does-spark-handle-data-streaming">How does Spark handle data streaming?</h2>
+<ul>
+<li><strong>Big Prerequisite</strong>: Data must be append-only (data can only be added to the source; existing data cannot be modified)</li>
+<li>Can integrate with various readers like files, queues, and Delta Lake tables</li>
+<li><strong>Read and Write</strong>:
+<ul>
+<li><code>streamDF = spark.readStream.table("source_table")</code></li>
+<li><code>streamDF.writeStream.table("target_table")</code></li>
+</ul></li>
+<li><strong>Modes</strong>: Continuous Mode and Triggered Mode</li>
+<li><strong>Checkpointing</strong> at regular intervals</li>
+<li><strong>Streaming guarantees</strong>: Fault recovery and exactly-once semantics</li>
+</ul>
+</section>
+<section id="how-can-we-handle-incremental-data-ingestion" class="level2">
+<h2 class="anchored" data-anchor-id="how-can-we-handle-incremental-data-ingestion">How can we handle incremental data ingestion?</h2>
+<ul>
+<li><strong>COPY INTO</strong> - Each execution only processes new files from the source location; previously ingested files are ignored</li>
+<li><strong>Auto Loader</strong> - Employs checkpointing, stores metadata information, efficient at scale, can handle millions of files</li>
+</ul>
+</section>
+<section id="what-is-medallion-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-medallion-architecture">What is Medallion Architecture?</h2>
+<p>As in medals, it has three levels: - <strong>Bronze</strong> - <strong>Silver</strong> - <strong>Gold</strong></p>
+</section>
+<section id="how-to-build-production-pipelines" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-build-production-pipelines">How to build Production Pipelines?</h2>
+<ul>
+<li><strong>Delta Live Tables (DLT)</strong> is a declarative ETL framework powered by Apache Spark for building reliable and maintainable data pipelines</li>
+<li><strong>Running DLT Pipelines</strong>: Production and Development mode</li>
+<li><strong>Change Data Capture (CDC)</strong></li>
+</ul>
+</section>
+<section id="what-is-data-governance" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-data-governance">What is Data Governance?</h2>
+<ul>
+<li>Data Cataloging</li>
+<li>Data Security</li>
+<li>Monitoring and Auditing</li>
+<li>Data Lineage</li>
+<li>Data Discovery</li>
+</ul>
+</section>
+<section id="what-is-unity-catalog" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-unity-catalog">What is Unity Catalog?</h2>
+<p>Traditional namespace: <code>schema.table</code> Unity Catalog namespace: <code>catalog.schema.table</code></p>
+<hr>
+<p>Pyspark</p>
+<p>What are two main structures for storing data when performing manipulations? Resilient Distributed Data - RDD - Each record as independend object/row Dataframe - Records in columns</p>
+<p>What are the various functions? from pyspark.sql.functions import split</p>
+<p>write a simple pyspark snippet for word count “““import pyspark.sql.functions as F</p>
+<p>results = ( spark.read.text(“./data/gutenberg_books/1342-0.txt”) .select(F.split(F.col(“value”), ” “).alias(”line”)) .select(F.explode(F.col(“line”)).alias(“word”)) .select(F.lower(F.col(“word”)).alias(“word”)) .select(F.regexp_extract(F.col(“word”), “[a-z’]*“, 0).alias(”word”)) .where(F.col(“word”) != ““) .groupby(”word”) .count() )”</p>
+<p>What are the rules for succsessful join?</p>
+<p>when to decide what type of UDF to use? <img src="https://datagan.site/engineering/assets/UDF.png" class="img-fluid" alt="UDF. Credit: Oreilly"></p>
+</section>
+<section id="projects-extracted" class="level2">
+<h2 class="anchored" data-anchor-id="projects-extracted">Projects Extracted</h2>
+<ol type="1">
+<li><p><strong>Build a Medallion Architecture</strong><br>
+<a href="https://learning.oreilly.com/library/view/databricks-certified-data/9781098166823/ch05.html#comparison_of_ingestion_mechanisms">Reference: Comparison of Ingestion Mechanisms</a></p></li>
+<li><p><strong>Implement DLT Pipeline</strong></p></li>
+</ol>
+
+
+</section>
+
+ ]]></description>
+  <category>data</category>
+  <guid>https://datagan.site/engineering/pyspark.html</guid>
+  <pubDate>Mon, 10 Nov 2025 18:30:00 GMT</pubDate>
+</item>
+<item>
+  <title>Netflix Games: Detecting Broken Gameplay Using Log Clustering</title>
+  <link>https://datagan.site/engineering/netflix_cluster_logs.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>At Netflix, the SRE team for Netflix Games focuses on monitoring key network performance metrics such as latency bitrate and packet loss<br>
+However, these metrics alone don’t always reveal when a game is actually <em>broken</em> from the player’s perspective.</p>
+<hr>
+<section id="the-challenge" class="level2">
+<h2 class="anchored" data-anchor-id="the-challenge">The Challenge</h2>
+<p>In some countries, popular Netflix games remained broken for up to three weeks — clearly unacceptable for player experience.<br>
+Traditional indicators, such as:</p>
+<ul>
+<li>Gameplay duration</li>
+<li>User feedback forms</li>
+</ul>
+<p>were too weak to reliably detect broken games.</p>
+<p>To address this, the team decided to focus deeply on one strong signal:</p>
+<blockquote class="blockquote">
+<p><strong>Gameplay time &lt; 120 seconds</strong></p>
+</blockquote>
+<p>This metric served as a practical proxy for identifying failed or frustrating game sessions.</p>
+<hr>
+</section>
+<section id="the-approach-log-clustering-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="the-approach-log-clustering-pipeline">The Approach: Log Clustering Pipeline</h2>
+<p>To understand the root causes behind short gameplay sessions, the team developed a log clustering pipeline<br>
+The process includes the following stages:</p>
+<section id="selection-filtering" class="level3">
+<h3 class="anchored" data-anchor-id="selection-filtering">1. Selection &amp; Filtering</h3>
+<ul>
+<li>Select logs containing relevant keywords such as <code>exception</code>, <code>error</code>, and <code>warning</code>.</li>
+</ul>
+</section>
+<section id="preprocessing" class="level3">
+<h3 class="anchored" data-anchor-id="preprocessing">2. Preprocessing</h3>
+<ul>
+<li>Mask PII (Personally Identifiable Information) to ensure privacy.<br>
+</li>
+<li>Keep only the first line of multi-line logs for consistency.<br>
+</li>
+<li>Normalize dynamic content (e.g., timestamps, IDs) to reduce noise and minimize the number of distinct log entries.</li>
+</ul>
+</section>
+<section id="vectorization" class="level3">
+<h3 class="anchored" data-anchor-id="vectorization">3. Vectorization</h3>
+<ul>
+<li>Convert log text into numerical vectors using the Sentence Transformer package.</li>
+</ul>
+</section>
+<section id="clustering" class="level3">
+<h3 class="anchored" data-anchor-id="clustering">4. Clustering</h3>
+<ul>
+<li>Apply DBSCAN (Density-Based Spatial Clustering of Applications with Noise) to group similar log messages.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<ul>
+<li>From over 20 million lines of logs**, the process produced approximately 130 meaningful clusters, each pointing to a distinct problem area.<br>
+</li>
+<li>The results were evaluated using a confusion matrix, measuring:
+<ul>
+<li><strong>Precision</strong></li>
+<li><strong>Recall</strong></li>
+<li><strong>F1 Score</strong></li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="current-status-future-work" class="level2">
+<h2 class="anchored" data-anchor-id="current-status-future-work">Current Status &amp; Future Work</h2>
+<ul>
+<li>The system currently runs hourly, providing near-real-time insights into potential issues.<br>
+</li>
+<li>The next step for the team is to reduce alerting latency to improve detection and response speed even further.</li>
+</ul>
+<hr>
+<p><em>Source: <a href="https://www.usenix.org/conference/srecon25americas/presentation/neidel">Netflix Games Talk — SREcon25 Americas</a></em></p>
+
+
+</section>
+
+ ]]></description>
+  <category>observability</category>
+  <guid>https://datagan.site/engineering/netflix_cluster_logs.html</guid>
+  <pubDate>Tue, 04 Nov 2025 18:30:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

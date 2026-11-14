@@ -1,0 +1,11 @@
+---
+title: "Lab"
+description: "Code where data engineering meets markets: backtests, data pipelines, and tools."
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+---
+

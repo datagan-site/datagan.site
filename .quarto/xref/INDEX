@@ -25,5 +25,65 @@
   },
   "system thinking/quick_patterns.qmd": {
     "quick_patterns.html": "41c564dc"
+  },
+  "lab/index.qmd": {
+    "index.html": "fd43f346"
+  },
+  "library/ddia.qmd": {
+    "ddia.html": "db673a3f"
+  },
+  "library/linear_culture.qmd": {
+    "linear_culture.html": "e82c0f6d"
+  },
+  "library/index.qmd": {
+    "index.html": "8f9169a1"
+  },
+  "library/oe.qmd": {
+    "oe.html": "a0278218"
+  },
+  "life/mantras.qmd": {
+    "mantras.html": "48ba8ca5"
+  },
+  "life/no_hurry.qmd": {
+    "no_hurry.html": "8b99ee0e"
+  },
+  "life/index.qmd": {
+    "index.html": "8ad1dc3b"
+  },
+  "markets/index.qmd": {
+    "index.html": "f9df88d9"
+  },
+  "log/index.qmd": {
+    "index.html": "fcc1041c"
+  },
+  "engineering/docker_k8s.qmd": {
+    "docker_k8s.html": "91667982"
+  },
+  "engineering/gcp.qmd": {
+    "gcp.html": "945470d0"
+  },
+  "engineering/quick_patterns.qmd": {
+    "quick_patterns.html": "5ce21a36"
+  },
+  "engineering/fastapi-sse.qmd": {
+    "fastapi-sse.html": "2fcb9642"
+  },
+  "engineering/netflix_cluster_logs.qmd": {
+    "netflix_cluster_logs.html": "607e6e28"
+  },
+  "engineering/index.qmd": {
+    "index.html": "5578a664"
+  },
+  "engineering/pyspark.qmd": {
+    "pyspark.html": "51781933"
+  },
+  "engineering/azure.qmd": {
+    "azure.html": "361e3393"
+  },
+  "engineering/pytorch.qmd": {
+    "pytorch.html": "197239c4"
+  },
+  "engineering/otel.qmd": {
+    "otel.html": "4f7d3edd"
   }
 }

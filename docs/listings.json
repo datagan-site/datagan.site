@@ -1,0 +1,58 @@
+[
+  {
+    "listing": "/engineering/index.html",
+    "items": [
+      "/engineering/fastapi-sse.html",
+      "/engineering/azure.html",
+      "/engineering/gcp.html",
+      "/engineering/pyspark.html",
+      "/engineering/netflix_cluster_logs.html"
+    ]
+  },
+  {
+    "listing": "/log/index.html",
+    "items": []
+  },
+  {
+    "listing": "/life/index.html",
+    "items": [
+      "/life/no_hurry.html"
+    ]
+  },
+  {
+    "listing": "/library/index.html",
+    "items": [
+      "/library/oe.html",
+      "/library/ddia.html",
+      "/library/linear_culture.html"
+    ]
+  },
+  {
+    "listing": "/lab/index.html",
+    "items": []
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/engineering/index.html",
+      "/markets/index.html",
+      "/lab/index.html",
+      "/library/index.html",
+      "/life/index.html",
+      "/log/index.html",
+      "/engineering/fastapi-sse.html",
+      "/library/oe.html",
+      "/engineering/azure.html",
+      "/life/no_hurry.html",
+      "/engineering/gcp.html",
+      "/engineering/pyspark.html",
+      "/library/ddia.html",
+      "/library/linear_culture.html",
+      "/engineering/netflix_cluster_logs.html"
+    ]
+  },
+  {
+    "listing": "/markets/index.html",
+    "items": []
+  }
+]

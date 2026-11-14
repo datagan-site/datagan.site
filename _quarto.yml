@@ -1,13 +1,28 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - CNAME
 
 website:
   title: "datagan.site"
+  site-url: https://datagan.site
   navbar:
     left:
       - href: index.qmd
         text: Home
+      - href: engineering/index.qmd
+        text: Engineering
+      - href: markets/index.qmd
+        text: Markets
+      - href: lab/index.qmd
+        text: Lab
+      - href: library/index.qmd
+        text: Library
+      - href: life/index.qmd
+        text: Life
+      - href: log/index.qmd
+        text: Log
       - about.qmd
 
 format:
@@ -17,17 +32,3 @@ format:
       - brand
     css: styles.css
     toc: true
-
-
-site:
-  navbar:
-    left:
-      - text: Home
-        href: index.qmd
-      - text: About
-        href: about.qmd
-      - text: Observability
-        href: observability/index.qmd
-
-
-

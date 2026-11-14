@@ -1,0 +1,11 @@
+---
+title: "Life"
+description: "Health, family, and inner peace."
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+---
+

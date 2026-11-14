@@ -1,0 +1,81 @@
+---
+title: "Server-Sent Events with FastAPI"
+date: 2026-05-21
+categories: [python]
+---
+
+SSE is the standard for streaming data from server to client over HTTP.
+Server pushes the update to the client
+
+
+Built a real-time news stream processing engine supporting infinite publisher streams, windowed aggregations, compile-once transformations, SSE delivery, and backpressure-aware async pipelines.
+
+
+Real-Time News Stream Processing Engine”
+That gives you:
+
+continuous event streams
+windows
+transforms
+fanout
+prioritization
+backpressure
+infinite producers
+
+without sounding like observability/log infrastructure.
+
+Why News Works Well
+
+News naturally behaves like streaming events.
+
+Example event:
+
+{
+  "source": "Reuters",
+  "category": "technology",
+  "headline": "AI chip demand rises",
+  "timestamp": ...
+}
+
+You can simulate:
+
+multiple publishers
+breaking news bursts
+category subscriptions
+rolling trends
+live feeds
+
+Very realistic for stream systems.
+
+Mapping from Log Concepts → News Concepts
+Streaming System Concept	News Equivalent
+log event	news article
+producer	publisher
+severity	priority
+stream	live feed
+aggregation	trend analysis
+alerts	breaking news
+fanout	subscribers
+filtering	topic/category filters
+Your Architecture Becomes
+News Publishers
+       ↓
+Ingress Queue
+       ↓
+Normalizer
+       ↓
+Transform Engine
+       ↓
+Window Aggregator
+       ↓
+Subscriber Queues
+       ↓
+SSE Clients
+
+Looks clean and product-oriented.
+Infinite Loop Producers
+Each publisher continuously emits articles:
+
+while running:
+    article = generate_news()
+    await ingress_queue.put(article)
