@@ -1,5 +1,6 @@
 ---
 title: "Server-Sent Events with FastAPI"
+description: "Stream real-time events from server to browser with Server-Sent Events in FastAPI."
 date: 2026-05-21
 categories: [python]
 ---

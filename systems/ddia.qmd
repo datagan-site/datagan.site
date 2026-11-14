@@ -1,5 +1,6 @@
 ---
 title: "Designing Data-Intensive Applications (2nd Edition): Notes"
+description: "My chapter notes on the 2nd edition of Designing Data-Intensive Applications."
 date: 2025-11-11
 categories: [books, data]
 aliases:

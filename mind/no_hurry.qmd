@@ -1,5 +1,6 @@
 ---
 title: "Checklist for Slowing Down"
+description: "A practical checklist to slow down, protect focus, and say yes less often."
 date: 2025-11-16
 categories: [inner-peace]
 ---

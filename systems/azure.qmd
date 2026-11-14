@@ -1,5 +1,6 @@
 ---
 title: "Azure - A Definitive Guide"
+description: "Short notes on Azure: Active Directory, Monitor, Boards, Pipelines, and resource groups."
 date: 2025-11-20
 categories: [cloud]
 ---

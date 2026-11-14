@@ -1,5 +1,6 @@
 ---
 title: "Databricks - PySpark: A Definitive Guide"
+description: "Databricks and PySpark basics: the lakehouse, Spark, Delta Lake, and key SQL functions."
 date: 2025-11-11
 categories: [data]
 aliases:

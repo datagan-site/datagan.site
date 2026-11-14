@@ -1,5 +1,6 @@
 ---
 title: "Linear Culture"
+description: "How Linear builds: small senior teams, full remote, and a deliberately normal tech stack."
 date: 2025-11-11
 categories: [company-study]
 aliases:

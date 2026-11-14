@@ -1,5 +1,6 @@
 ---
 title: "Netflix Games: Detecting Broken Gameplay Using Log Clustering"
+description: "How Netflix Games finds broken gameplay by clustering logs from very short sessions."
 date: 2025-11-05
 categories: [observability]
 aliases:

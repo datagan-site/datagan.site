@@ -1,5 +1,6 @@
 ---
 title: "Observability Engineering: Notes"
+description: "Why traditional monitoring fails, and what observability adds: notes from the book."
 date: 2025-12-02
 categories: [books, observability]
 ---

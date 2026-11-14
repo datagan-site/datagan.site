@@ -214,14 +214,14 @@
     "href": "mind/index.html",
     "title": "Mind",
     "section": "",
-    "text": "Checklist for Slowing Down\n\n\n\ninner-peace\n\n\n\n\n\n\n\n\n\n\n\nNov 16, 2025\n\n\n\n\n\nNo matching items"
+    "text": "Checklist for Slowing Down\n\n\n\ninner-peace\n\n\n\n\nA practical checklist to slow down, protect focus, and say yes less often.\n\n\n\n\n\n\nNov 16, 2025\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "notes/index.html",
     "href": "notes/index.html",
     "title": "Notes",
     "section": "",
-    "text": "Linear Culture\n\n\n\ncompany-study\n\n\n\n\n\n\n\n\n\n\n\nNov 11, 2025\n\n\n\n\n\nNo matching items"
+    "text": "Linear Culture\n\n\n\ncompany-study\n\n\n\n\nHow Linear builds: small senior teams, full remote, and a deliberately normal tech stack.\n\n\n\n\n\n\nNov 11, 2025\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -249,7 +249,7 @@
     "href": "index.html#latest",
     "title": "DataGan",
     "section": "Latest",
-    "text": "Latest\n\n\n\n\n\nServer-Sent Events with FastAPI\n\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 21, 2026\n\n1 min\n\n\n\n\n\n\nObservability Engineering: Notes\n\n\n\nbooks\n\nobservability\n\n\n\n\n\n\n\n\n\n\n\nDec 2, 2025\n\n2 min\n\n\n\n\n\n\nAzure - A Definitive Guide\n\n\n\ncloud\n\n\n\n\n\n\n\n\n\n\n\nNov 20, 2025\n\n1 min\n\n\n\n\n\n\nChecklist for Slowing Down\n\n\n\ninner-peace\n\n\n\n\n\n\n\n\n\n\n\nNov 16, 2025\n\n2 min\n\n\n\n\n\n\nDesigning Data-Intensive Applications (2nd Edition): Notes\n\n\n\nbooks\n\ndata\n\n\n\n\n\n\n\n\n\n\n\nNov 11, 2025\n\n12 min\n\n\n\n\n\n\nGCP - A Definitive Guide\n\n\n\ncloud\n\n\n\n\n\n\n\n\n\n\n\nNov 11, 2025\n\n4 min\n\n\n\n\n\n\nDatabricks - PySpark: A Definitive Guide\n\n\n\ndata\n\n\n\n\n\n\n\n\n\n\n\nNov 11, 2025\n\n4 min\n\n\n\n\n\n\nLinear Culture\n\n\n\ncompany-study\n\n\n\n\n\n\n\n\n\n\n\nNov 11, 2025\n\n2 min\n\n\n\n\n\n\nNetflix Games: Detecting Broken Gameplay Using Log Clustering\n\n\n\nobservability\n\n\n\n\n\n\n\n\n\n\n\nNov 5, 2025\n\n2 min\n\n\n\n\nNo matching items"
+    "text": "Latest\n\n\n\n\n\nServer-Sent Events with FastAPI\n\n\n\npython\n\n\n\n\nStream real-time events from server to browser with Server-Sent Events in FastAPI.\n\n\n\n\n\n\nMay 21, 2026\n\n1 min\n\n\n\n\n\n\nObservability Engineering: Notes\n\n\n\nbooks\n\nobservability\n\n\n\n\nWhy traditional monitoring fails, and what observability adds: notes from the book.\n\n\n\n\n\n\nDec 2, 2025\n\n2 min\n\n\n\n\n\n\nAzure - A Definitive Guide\n\n\n\ncloud\n\n\n\n\nShort notes on Azure: Active Directory, Monitor, Boards, Pipelines, and resource groups.\n\n\n\n\n\n\nNov 20, 2025\n\n1 min\n\n\n\n\n\n\nChecklist for Slowing Down\n\n\n\ninner-peace\n\n\n\n\nA practical checklist to slow down, protect focus, and say yes less often.\n\n\n\n\n\n\nNov 16, 2025\n\n2 min\n\n\n\n\n\n\nDesigning Data-Intensive Applications (2nd Edition): Notes\n\n\n\nbooks\n\ndata\n\n\n\n\nMy chapter notes on the 2nd edition of Designing Data-Intensive Applications.\n\n\n\n\n\n\nNov 11, 2025\n\n12 min\n\n\n\n\n\n\nGCP - A Definitive Guide\n\n\n\ncloud\n\n\n\n\nCloud layers and Google Compute Engine: machine types, scaling, cost, and IAM.\n\n\n\n\n\n\nNov 11, 2025\n\n4 min\n\n\n\n\n\n\nDatabricks - PySpark: A Definitive Guide\n\n\n\ndata\n\n\n\n\nDatabricks and PySpark basics: the lakehouse, Spark, Delta Lake, and key SQL functions.\n\n\n\n\n\n\nNov 11, 2025\n\n4 min\n\n\n\n\n\n\nLinear Culture\n\n\n\ncompany-study\n\n\n\n\nHow Linear builds: small senior teams, full remote, and a deliberately normal tech stack.\n\n\n\n\n\n\nNov 11, 2025\n\n2 min\n\n\n\n\n\n\nNetflix Games: Detecting Broken Gameplay Using Log Clustering\n\n\n\nobservability\n\n\n\n\nHow Netflix Games finds broken gameplay by clustering logs from very short sessions.\n\n\n\n\n\n\nNov 5, 2025\n\n2 min\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "notes/linear_culture.html",
@@ -284,7 +284,7 @@
     "href": "systems/index.html",
     "title": "Systems",
     "section": "",
-    "text": "Server-Sent Events with FastAPI\n\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\nMay 21, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nObservability Engineering: Notes\n\n\n\nbooks\n\nobservability\n\n\n\n\n\n\n\n\n\n\n\nDec 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nAzure - A Definitive Guide\n\n\n\ncloud\n\n\n\n\n\n\n\n\n\n\n\nNov 20, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDesigning Data-Intensive Applications (2nd Edition): Notes\n\n\n\nbooks\n\ndata\n\n\n\n\n\n\n\n\n\n\n\nNov 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nGCP - A Definitive Guide\n\n\n\ncloud\n\n\n\n\n\n\n\n\n\n\n\nNov 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDatabricks - PySpark: A Definitive Guide\n\n\n\ndata\n\n\n\n\n\n\n\n\n\n\n\nNov 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nNetflix Games: Detecting Broken Gameplay Using Log Clustering\n\n\n\nobservability\n\n\n\n\n\n\n\n\n\n\n\nNov 5, 2025\n\n\n\n\n\nNo matching items"
+    "text": "Server-Sent Events with FastAPI\n\n\n\npython\n\n\n\n\nStream real-time events from server to browser with Server-Sent Events in FastAPI.\n\n\n\n\n\n\nMay 21, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nObservability Engineering: Notes\n\n\n\nbooks\n\nobservability\n\n\n\n\nWhy traditional monitoring fails, and what observability adds: notes from the book.\n\n\n\n\n\n\nDec 2, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nAzure - A Definitive Guide\n\n\n\ncloud\n\n\n\n\nShort notes on Azure: Active Directory, Monitor, Boards, Pipelines, and resource groups.\n\n\n\n\n\n\nNov 20, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDesigning Data-Intensive Applications (2nd Edition): Notes\n\n\n\nbooks\n\ndata\n\n\n\n\nMy chapter notes on the 2nd edition of Designing Data-Intensive Applications.\n\n\n\n\n\n\nNov 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nGCP - A Definitive Guide\n\n\n\ncloud\n\n\n\n\nCloud layers and Google Compute Engine: machine types, scaling, cost, and IAM.\n\n\n\n\n\n\nNov 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nDatabricks - PySpark: A Definitive Guide\n\n\n\ndata\n\n\n\n\nDatabricks and PySpark basics: the lakehouse, Spark, Delta Lake, and key SQL functions.\n\n\n\n\n\n\nNov 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nNetflix Games: Detecting Broken Gameplay Using Log Clustering\n\n\n\nobservability\n\n\n\n\nHow Netflix Games finds broken gameplay by clustering logs from very short sessions.\n\n\n\n\n\n\nNov 5, 2025\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "systems/azure.html",

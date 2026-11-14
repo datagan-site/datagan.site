@@ -1,5 +1,6 @@
 ---
 title: "GCP - A Definitive Guide"
+description: "Cloud layers and Google Compute Engine: machine types, scaling, cost, and IAM."
 date: 2025-11-11
 categories: [cloud]
 ---
