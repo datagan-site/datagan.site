@@ -2,12 +2,11 @@
 title: "DataGan"
 listing:
   contents:
-    - "engineering/*.qmd"
-    - "markets/*.qmd"
-    - "lab/*.qmd"
-    - "library/*.qmd"
-    - "life/*.qmd"
-    - "log/*.qmd"
+    - "systems/*.qmd"
+    - "money/*.qmd"
+    - "body/*.qmd"
+    - "mind/*.qmd"
+    - "notes/*.qmd"
   sort: "date desc"
   type: table
   fields: [date, title, categories]

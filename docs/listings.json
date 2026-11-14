@@ -1,58 +1,53 @@
 [
   {
-    "listing": "/engineering/index.html",
+    "listing": "/mind/index.html",
     "items": [
-      "/engineering/fastapi-sse.html",
-      "/engineering/azure.html",
-      "/engineering/gcp.html",
-      "/engineering/pyspark.html",
-      "/engineering/netflix_cluster_logs.html"
+      "/mind/no_hurry.html"
     ]
   },
   {
-    "listing": "/log/index.html",
-    "items": []
-  },
-  {
-    "listing": "/life/index.html",
+    "listing": "/notes/index.html",
     "items": [
-      "/life/no_hurry.html"
+      "/notes/linear_culture.html"
     ]
   },
   {
-    "listing": "/library/index.html",
-    "items": [
-      "/library/oe.html",
-      "/library/ddia.html",
-      "/library/linear_culture.html"
-    ]
-  },
-  {
-    "listing": "/lab/index.html",
+    "listing": "/body/index.html",
     "items": []
   },
   {
     "listing": "/index.html",
     "items": [
-      "/engineering/index.html",
-      "/markets/index.html",
-      "/lab/index.html",
-      "/library/index.html",
-      "/life/index.html",
-      "/log/index.html",
-      "/engineering/fastapi-sse.html",
-      "/library/oe.html",
-      "/engineering/azure.html",
-      "/life/no_hurry.html",
-      "/engineering/gcp.html",
-      "/engineering/pyspark.html",
-      "/library/ddia.html",
-      "/library/linear_culture.html",
-      "/engineering/netflix_cluster_logs.html"
+      "/systems/index.html",
+      "/money/index.html",
+      "/body/index.html",
+      "/mind/index.html",
+      "/notes/index.html",
+      "/systems/fastapi-sse.html",
+      "/systems/oe.html",
+      "/systems/azure.html",
+      "/mind/no_hurry.html",
+      "/systems/ddia.html",
+      "/systems/gcp.html",
+      "/systems/pyspark.html",
+      "/notes/linear_culture.html",
+      "/systems/netflix_cluster_logs.html"
     ]
   },
   {
-    "listing": "/markets/index.html",
+    "listing": "/money/index.html",
     "items": []
+  },
+  {
+    "listing": "/systems/index.html",
+    "items": [
+      "/systems/fastapi-sse.html",
+      "/systems/oe.html",
+      "/systems/azure.html",
+      "/systems/ddia.html",
+      "/systems/gcp.html",
+      "/systems/pyspark.html",
+      "/systems/netflix_cluster_logs.html"
+    ]
   }
 ]

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>datagan.site</title>
+<link>https://datagan.site/notes/</link>
+<atom:link href="https://datagan.site/notes/index.xml" rel="self" type="application/rss+xml"/>
+<description>Everything else: ideas, stories, and things I want to remember.</description>
+<generator>quarto-1.11.9</generator>
+<lastBuildDate>Mon, 10 Nov 2025 18:30:00 GMT</lastBuildDate>
+<item>
+  <title>Linear Culture</title>
+  <link>https://datagan.site/notes/linear_culture.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Big Tech experience builds credibility, skills, and makes fundraising easier for founders.</p>
+<p>Linear’s idea formed from two insights: ICs dislike manager-oriented tools, and product teams lack a consistent methodology.</p>
+<p>Company mission: help teams build better software; start with IC-friendly issue tracking and grow to compete with enterprise tools.</p>
+<p>Early team composition: two engineers and one designer with complementary strengths.</p>
+<p>First hires came from the founders’ network; contractors were converted to full-time after proving fit.</p>
+<p>Hire people who can later lead functions (e.g., customer success lead hired early to handle support load).</p>
+<p>Linear stayed full-remote from day one; focus and minimal meetings are key benefits.</p>
+<p>Remote made hiring juniors harder, so they hired seniors who need little mentoring.</p>
+<p>Work is organized by time zones to reduce daily cross-timezone collaboration.</p>
+<p>In-person gatherings happen ~twice a year to align on long-term vision.</p>
+<p>Tech stack is intentionally “normal”: TypeScript, React, Node, Postgres, Redis (queues), MongoDB (caching), GraphQL, on GCP with Kubernetes.</p>
+<p>A proprietary sync engine handles replication, offline mode, networking, and errors so feature work doesn’t depend on backend changes.</p>
+<p>Choosing a mainstream stack lets any engineer solo build most features end-to-end.</p>
+<p>Linear invests in infrastructure early (e.g., Kubernetes, sync engine) to stay small and move fast later.</p>
+<p>Culture empowers engineers to choose much of their work; a few major projects plus self-selected smaller tasks.</p>
+<p>Linear Method highlights: set direction with a roadmap and milestones; write simple tasks (not user stories); build with users; publish a changelog.</p>
+<p>They break their own method when it isn’t the right fit for a situation.</p>
+<p>Hiring philosophy: “hire less, but hire the best”; very high bar and slow growth.</p>
+<p>Interview process: practical coding and architecture interviews (no algorithms), followed by a paid week-long work trial on a real, greenfield task.</p>
+<p>Hiring slowly contributed to early profitability, despite available funds.</p>
+<p>Big Tech learning: large codebases make architectural change expensive; continually improve architecture and compartmentalization early.</p>
+<p>Big Tech learning unlearned: heavy reliance on A/B testing; for tools like Linear, intuition and customer research matter more than analytics.</p>
+<p>Hypergrowth pitfalls observed at Uber: rapid headcount growth, brittle first-gen systems, years-long migrations, and most engineers ending up on infrastructure.</p>
+<p>Linear aims to keep software engineering a product problem so engineers focus on customer value, not just infrastructure.</p>
+<p>Founders advise leveraging Big Tech pedigree when starting a company and building an online audience to kick-start adoption.</p>
+<p>Source: https://newsletter.pragmaticengineer.com/p/linear</p>
+
+
+
+ ]]></description>
+  <category>company-study</category>
+  <guid>https://datagan.site/notes/linear_culture.html</guid>
+  <pubDate>Mon, 10 Nov 2025 18:30:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

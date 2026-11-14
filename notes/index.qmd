@@ -1,0 +1,11 @@
+---
+title: "Notes"
+description: "Everything else: ideas, stories, and things I want to remember."
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+---
+

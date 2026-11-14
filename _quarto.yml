@@ -11,18 +11,16 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: engineering/index.qmd
-        text: Engineering
-      - href: markets/index.qmd
-        text: Markets
-      - href: lab/index.qmd
-        text: Lab
-      - href: library/index.qmd
-        text: Library
-      - href: life/index.qmd
-        text: Life
-      - href: log/index.qmd
-        text: Log
+      - href: systems/index.qmd
+        text: Systems
+      - href: money/index.qmd
+        text: Money
+      - href: body/index.qmd
+        text: Body
+      - href: mind/index.qmd
+        text: Mind
+      - href: notes/index.qmd
+        text: Notes
       - about.qmd
 
 format:

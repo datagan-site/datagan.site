@@ -85,5 +85,62 @@
   },
   "engineering/otel.qmd": {
     "otel.html": "4f7d3edd"
+  },
+  "body/index.qmd": {
+    "index.html": "879c890a"
+  },
+  "notes/linear_culture.qmd": {
+    "linear_culture.html": "27bb2c4b"
+  },
+  "notes/index.qmd": {
+    "index.html": "aa902627"
+  },
+  "money/index.qmd": {
+    "index.html": "f227141b"
+  },
+  "mind/mantras.qmd": {
+    "mantras.html": "85bace5d"
+  },
+  "mind/no_hurry.qmd": {
+    "no_hurry.html": "07f06ea5"
+  },
+  "mind/index.qmd": {
+    "index.html": "254453c9"
+  },
+  "systems/docker_k8s.qmd": {
+    "docker_k8s.html": "a7db3abd"
+  },
+  "systems/gcp.qmd": {
+    "gcp.html": "828344eb"
+  },
+  "systems/quick_patterns.qmd": {
+    "quick_patterns.html": "a5e664de"
+  },
+  "systems/fastapi-sse.qmd": {
+    "fastapi-sse.html": "4429a4a5"
+  },
+  "systems/ddia.qmd": {
+    "ddia.html": "11e987f0"
+  },
+  "systems/netflix_cluster_logs.qmd": {
+    "netflix_cluster_logs.html": "1f148fe6"
+  },
+  "systems/index.qmd": {
+    "index.html": "bff3c5d0"
+  },
+  "systems/pyspark.qmd": {
+    "pyspark.html": "791b89b0"
+  },
+  "systems/azure.qmd": {
+    "azure.html": "06d64870"
+  },
+  "systems/oe.qmd": {
+    "oe.html": "5bc1a666"
+  },
+  "systems/pytorch.qmd": {
+    "pytorch.html": "99d0ed4a"
+  },
+  "systems/otel.qmd": {
+    "otel.html": "f8bee621"
   }
 }

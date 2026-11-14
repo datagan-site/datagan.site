@@ -1,0 +1,14 @@
+---
+title: "Money"
+description: "Markets, trading, and investing: what I try and what I learn."
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+---
+
+::: {.callout-warning}
+This is my personal journal. It is not investment advice. I am not a SEBI-registered adviser. I do not give buy or sell calls.
+:::

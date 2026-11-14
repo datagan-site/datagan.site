@@ -1,0 +1,11 @@
+---
+title: "Body"
+description: "Food, fitness, and the road to a healthier me."
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+---
+

@@ -1,0 +1,11 @@
+---
+title: "Mind"
+description: "Calm, family, and the inner work."
+listing:
+  contents: "*.qmd"
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
+---
+
